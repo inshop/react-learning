@@ -18,13 +18,3 @@ class Routes extends Component {
 }
 
 export default Routes;
-
-
-// const Main = () => (
-//   <main>
-//     <Switch>
-//       <Route exact path='/' component={Homepage}/>
-//       <Route path='/profile' component={Profile}/>
-//     </Switch>
-//   </main>
-// )

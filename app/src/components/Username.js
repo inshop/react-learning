@@ -14,15 +14,18 @@ class Username extends Component {
   componentWillMount () {
     setInterval(() => {
       this.setState({vue: this.state.vue + 1})
+      this.props.onChange(this.props.name, this.state.vue)
+      // this.props.username = 1
     }, 1000)
   }
 
   render() {
     return (
       <div>
+        <h1>{this.props.name}</h1>
         <h1>{this.state.title}</h1>
         <h2>{this.state.react} : {this.state.vue}</h2>
-        Username: {this.props.username}
+        Username: {this.props.value}
       </div>
     );
   }

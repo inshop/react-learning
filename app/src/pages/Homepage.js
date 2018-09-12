@@ -12,11 +12,27 @@ class Homepage extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-        <Username username="Przemysław"/>
+        <div>{this.state.data}</div>
+
+        <Username value="Marcin" name="data" onChange={this.onChange} />
 
         <Link to='/profile'>Profile</Link>
       </div>
     );
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: null
+    };
+
+    this.onChange = this.onChange.bind(this)
+  }
+
+  onChange (name, value) {
+    this.setState({[name]: value})
   }
 }
 
