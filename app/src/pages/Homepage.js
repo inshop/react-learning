@@ -25,7 +25,7 @@ class Homepage extends Component {
     super(props);
 
     this.state = {
-      data: null
+      data: 0
     };
 
     this.onChange = this.onChange.bind(this)
